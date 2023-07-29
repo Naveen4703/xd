@@ -327,22 +327,9 @@ function allowPageScroll() {
     document.body.style.overflow = "auto";
 }
 
-
-  /*  const $name = document.getElementById('name').value;
-    const $regNumber = document.getElementById('regNumber').value;
-    const $collegeName = document.getElementById('collegeName').value;
-    const $degree = document.getElementById('selectedDegree').value;
-    const $year = document.getElementById('passingYear').value;
-    const $phoneNumber = document.getElementById('phoneNumber').value;
-    const $whatsappNumber = document.getElementById('whatsappNumber').value;
-    const $email = document.getElementById('email').value;
-   // const $gender = 
-   const $state = document.getElementById('selectedState').value;
-   const district = document.getElementById('districtOPtions').value;
-*/
 function sendDataToBackend(formDataObject) {
     console.log(formDataObject);
-    fetch('http://127.0.0.1:8080/api/register', {
+    fetch('/api/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
