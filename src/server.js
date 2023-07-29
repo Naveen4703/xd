@@ -13,12 +13,12 @@ const adminApp = express();
 
 // Set up middleware for main domain
 const publicDirectoryPath = path.join(__dirname, '../public');
-app.use(vhost(process.env.IP, express.static(publicDirectoryPath)));
+app.use(vhost('xdtrinetra.me', express.static(publicDirectoryPath)));
 
 // Set up middleware for admin subdomain
 const adminDirectoryPath = path.join(__dirname, '../admin');
 adminApp.use(express.static(adminDirectoryPath));
-app.use(vhost(`admin.${process.env.IP}`, adminApp));
+app.use(vhost('admin.xdtrinetra.me', adminApp));
 
 // Set up App other middleware
 app.use(express.json());
